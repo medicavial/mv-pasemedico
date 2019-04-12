@@ -1,0 +1,306 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+body, app-root, app-login {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  /* background-color: #FAFAFA; */
+  background-color: #ECEFF1;
+  /* font-size: 1.2em; */
+}
+
+.espacio{
+  margin-top: 2em;
+}
+
+.espacio-sm{
+  margin-top: 1em;
+}
+
+.espacio-xs{
+  margin-top: 0.5em;
+}
+
+.mdi-spin {
+  -webkit-animation: mdi-spin 2s infinite linear;
+          animation: mdi-spin 2s infinite linear;
+}
+
+/* header, main, footer { */
+header, footer {
+  padding-left: 300px;
+}
+
+.espacioLateral{
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, footer {
+    padding-left: 0;
+  }
+  .espacioLateral{
+    padding-left: 0;
+  }
+  .espacio{
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  nav .brand-logo {
+    font-size: 1.1rem !important;
+    font-weight: bold;
+  }
+  .card .card-title{
+    font-size: 18px;
+  }
+  .btn-gigante{
+    height: 100px;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}
+
+nav .brand-logo {
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+}
+
+@-webkit-keyframes mdi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);}
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+}
+
+@keyframes mdi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+}
+
+.background > img{
+  max-width: 100% !important;
+}
+
+.container{
+  width: 98% !important;
+}
+
+body, app-root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.card.xsmall {
+  height: 200px;
+  min-width: 100%;
+}
+
+.card.xsmall {
+  position: relative;
+}
+
+.card.xsmall .card-image {
+  max-height: 70%;
+  overflow: hidden;
+}
+
+.card.xsmall .card-image + .card-content {
+  max-height: 60%;
+}
+
+.card.xsmall .card-content{
+  padding: 0 10px 0 10px;
+}
+
+.imgMid {
+  margin-top: -25% !important;
+}
+
+.azul-mv {
+  background-color: #0082cd !important;
+}
+
+.azul-text {
+  color: #0082cd !important;
+}
+
+.waves-effect.waves-azulmv .waves-ripple {
+  background-color: rgba(0, 130, 205, 0.65);
+}
+
+.mayusculas{
+  text-transform: uppercase;
+}
+
+.minusculas{
+  text-transform: lowercase;
+}
+
+.seleccion{
+  cursor: pointer;
+}
+
+.logo-navbar{
+  /* opacity: 1; */
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.btn-block{
+  width: 100% !important;
+}
+
+.closeNavbar {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 85%;
+}
+
+.card-mobile{
+  padding: 2px !important;
+}
+
+.no-shadow{
+  /* box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0), 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0), 0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0); */
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.btn-xl{
+  width: 100%;
+  height: 100px;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.btn-gigante{
+  width: 100%;
+  height: 150px;
+  font-size: 1.4em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.espacio-minimo{
+  margin-top: -2em;
+}
+
+.espacio-right{
+  margin-right: -1em;
+}
+
+.card-content-min{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.card-content-min > .row{
+  margin-bottom: 0;
+}
+
+.btn-sinEspacio{
+  margin-bottom: -2em;
+}
+
+/* Checked styles */
+[type="radio"]:checked + span:after,
+[type="radio"].valido.with-gap:checked + span:before,
+[type="radio"].valido.with-gap:checked + span:after {
+  border: 2px solid #388e3c;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].valido.with-gap:checked + span:after {
+  background-color: #388e3c;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/* input warning color */
+input.warning:not([type]), input.warning:not([type]):focus,
+input[type=text].warning:not(.browser-default),
+input[type=text].warning:not(.browser-default):focus,
+input[type=password].warning:not(.browser-default),
+input[type=password].warning:not(.browser-default):focus,
+input[type=email].warning:not(.browser-default),
+input[type=email].warning:not(.browser-default):focus,
+input[type=url].warning:not(.browser-default),
+input[type=url].warning:not(.browser-default):focus,
+input[type=time].warning:not(.browser-default),
+input[type=time].warning:not(.browser-default):focus,
+input[type=date].warning:not(.browser-default),
+input[type=date].warning:not(.browser-default):focus,
+input[type=datetime].warning:not(.browser-default),
+input[type=datetime].warning:not(.browser-default):focus,
+input[type=datetime-local].warning:not(.browser-default),
+input[type=datetime-local].warning:not(.browser-default):focus,
+input[type=tel].warning:not(.browser-default),
+input[type=tel].warning:not(.browser-default):focus,
+input[type=number].warning:not(.browser-default),
+input[type=number].warning:not(.browser-default):focus,
+input[type=search].warning:not(.browser-default),
+input[type=search].warning:not(.browser-default):focus,
+textarea.materialize-textarea.warning,
+textarea.materialize-textarea.warning:focus, .select-wrapper.warning > input.select-dropdown {
+  border-bottom: 1px solid #ff9800;
+  -webkit-box-shadow: 0 1px 0 0 #ff9800;
+          box-shadow: 0 1px 0 0 #ff9800;
+}
+
+.tel{
+  color: #455a64;
+  text-decoration: none;
+}
+.tel:hover{
+  color: #0097a7;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active,
+.ngx-datatable.material.single-selection .datatable-body-row.active
+.datatable-row-group, .ngx-datatable.material.multi-selection
+.datatable-body-row.active, .ngx-datatable.material.multi-selection
+.datatable-body-row.active .datatable-row-group, .ngx-datatable.material.multi-click-selection
+.datatable-body-row.active, .ngx-datatable.material.multi-click-selection
+.datatable-body-row.active .datatable-row-group {
+    background-color: #ffe082 !important;
+    color: #FFF;
+}

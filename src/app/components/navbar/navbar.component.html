@@ -1,0 +1,44 @@
+<div class="navbar-fixed">
+  <nav *ngIf="_authService.checkSession()" class="azul-mv">
+    <div class="nav-wrapper" [ngClass]="{'espacioLateral': _authService.checkSession() }">
+      <div class="container">
+        <span class="brand-logo truncate">
+          <i class="mdi mdi-chevron-right hide-on-med-and-down"></i> {{ tituloSeccion }}
+        </span>
+        <span class="brand-logo right logo-navbar" *ngIf="pantalla > 992">
+          <img src="assets/img/logos/logo.png" height="35">
+        </span>
+      </div>
+      <a href="#" data-target="slide-out" class="sidenav-trigger" *ngIf="_authService.checkSession()"><i class="mdi mdi-menu"></i></a>
+    </div>
+  </nav>
+</div>
+
+<ul id="slide-out" class="sidenav sidenav-fixed" *ngIf="_authService.checkSession()">
+  <li>
+    <!-- <div class="user-view seleccion" [routerLink]="['/perfil']"> -->
+    <div class="user-view">
+      <div class="background">
+        <img src="assets/img/bg/rh3.jpg">
+      </div>
+      <span class="closeNavbar hide-on-large-only"><i class="mdi mdi-close mdi-36px sidenav-close white-text"></i></span>
+      <!-- <img class="circle" src="assets/img/avatar.jpg" *ngIf="usuario"> -->
+      <img class="circle" src="/assets/img/{{ usuario.USU_avatar }}" *ngIf="usuario">
+      <span class="white-text name">{{ usuario.fullName }}</span>
+      <span class="white-text email">{{ usuario.PER_alias | uppercase }}</span>
+      <!-- <span class="white-text email">&nbsp;</span> -->
+    </div>
+  </li>
+  <li><a class="waves-effect" [routerLink]="['/inicio']" (click)="prueba()"><i class="mdi mdi-home mdi-18px"></i>Inicio</a></li>
+  <li><a class="waves-effect" [routerLink]="['/generaorden']" (click)="prueba()"><i class="mdi mdi-account-card-details mdi-18px"></i>Generar Orden</a></li>
+  <li><a class="waves-effect" [routerLink]="['/inicio']" (click)="prueba()"><i class="mdi mdi-format-list-bulleted-type mdi-18px"></i>Listado</a></li>
+  <li>
+    <a class="waves-effect" [routerLink]="['/administracion']" (click)="prueba()" *ngIf="usuario.PER_admin===1">
+      <i class="mdi mdi-clipboard-flow mdi-18px"></i>Administración
+    </a>
+  </li>
+  <li><a class="waves-effect" [routerLink]="['/ayuda']" (click)="prueba()"><i class="mdi mdi-help-circle mdi-18px"></i>Ayuda</a></li>
+  <li><div class="divider"></div></li>
+  <!-- <li><a class="subheader">Subheader</a></li> -->
+  <li><a class="waves-effect" (click)="logout()"><i class="mdi mdi-logout mdi-18px"></i>Cerrar sesión</a></li>
+</ul>

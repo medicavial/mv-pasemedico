@@ -1,0 +1,316 @@
+<div class="container animated fadeIn fast" [ngClass]="{'espacioLateral': _authService.checkSession()}">
+  <div class="row animated fadeIn fast" *ngIf="!verContacto && !verGuias">
+    <div class="col s12 m6 l4">
+      <button type="button" name="button" class="btn btn-xl waves-effect waves-light blue" (click)="switchContacto()">
+        <i class="mdi mdi-phone mdi-36px"></i>
+        <br>
+        Contacto
+      </button>
+    </div>
+
+    <!-- <div class="col s12 m6 l4">
+      <button type="button" name="button" class="btn btn-xl waves-effect waves-light cyan" (click)="switchGuias()">
+        <i class="mdi mdi-book-open mdi-36px"></i>
+        <br>
+        Guías
+      </button>
+    </div> -->
+
+    <div class="col s12 m6 l4">
+      <button type="button" name="button" class="btn btn-xl waves-effect waves-light teal accent-4" (click)="switchGuias()">
+        <i class="mdi mdi-script mdi-36px"></i>
+        <br>
+        Legales
+      </button>
+    </div>
+  </div>
+
+  <!-- inicia seccion de contacto -->
+  <div class="row animated fadeIn fast" *ngIf="verContacto">
+    <div class="col s12" align="right">
+      <button type="button" name="button" class="btn red waves-effect waves-light" (click)="switchContacto()">
+        <i class="mdi mdi-close"></i>
+        Cerrar
+      </button>
+    </div>
+    <div class="col s12 m6 l6">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Directorio de clínicas</span>
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Chihuahua</b></span>
+              <p>
+                <a href="tel:+526144101142" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 614) 410 - 1142
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+526144102201" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 614) 410 - 2201
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Colonia Roma</b></span>
+              <p>
+                <a href="tel:+525555332400" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5533 - 2400
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+525555332401" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5533 - 2401
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Interlomas</b></span>
+              <p>
+                <a href="tel:+525552905657" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5290 - 5657
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+525552904800" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5290 - 4800
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Mérida</b></span>
+              <p>
+                <a href="tel:+529999275875" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 999) 927 - 5875
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+529999275885" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 999) 927 - 5885
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Monterrey</b></span>
+              <p>
+                <a href="tel:+528183484591" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 81) 8348 - 4591
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+528183484589" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 81) 8348 - 4589
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Perisur</b></span>
+              <p>
+                <a href="tel:+525551713030" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5171 - 3030
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+525551710002" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5171 - 0002
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Puebla</b></span>
+              <p>
+                <a href="tel:+522222489000" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 222) 248 - 9000
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+522222484857" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 222) 248 - 4857
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial San Luis</b></span>
+              <p>
+                <a href="tel:+524448171008" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 444) 817 - 1008
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+524448172446" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 444) 817 - 2446
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Satelite</b></span>
+              <p>
+                <a href="tel:+525555620010" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5562 - 0010
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+525555622255" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 55) 5562 - 2255
+                </a>
+              </p>
+            </li>
+
+            <li class="collection-item avatar">
+              <i class="mdi mdi-hospital-building circle cyan"></i>
+              <span class="title"><b>Médica Vial Veracruz</b></span>
+              <p>
+                <a href="tel:+522291307583" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 229) 130 - 7583
+                </a>
+              </p>
+
+              <p>
+                <a href="tel:+522291792289" class="tel seleccion">
+                  <i class="mdi mdi-phone"></i> (01 229) 179 - 2289
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l6">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Directorio administrativo</span>
+
+          <ul class="collection">
+            <ng-container>
+              <!-- <li class="collection-item avatar">
+                <i class="mdi mdi-account-star circle teal accent-4"></i>
+                <span class="title"><b>Nadia Viridiana González Trejo</b></span>
+                <br>
+                <span>Jefa de Rehabilitación</span>
+                <p>
+                  <a href="tel:+525555144700" class="tel"><i class="mdi mdi-phone"></i> 5514 - 4700 ext. 215</a>
+                  <br>
+                  <a href="mailto:coordreh@medicavial.com.mx" class="tel"><i class="mdi mdi-email"></i> coordreh@medicavial.com.mx</a>
+                </p>
+              </li> -->
+
+              <!-- <li class="collection-item avatar">
+                <i class="mdi mdi-account-star circle teal accent-4"></i>
+                <span class="title"><b>Carmen Hernández Gutiérrez</b></span>
+                <br>
+                <span>Coordinadora Administrativa</span>
+                <p>
+                  <a href="tel:+525555144700" class="tel"><i class="mdi mdi-phone"></i> 5514 - 4700 ext. 227</a>
+                  <br>
+                  <a href="mailto:chernandez@medicavial.com.mx" class="tel"><i class="mdi mdi-email"></i> chernandez@medicavial.com.mx</a>
+                </p>
+              </li> -->
+
+              <li class="collection-item avatar">
+                              <i class="mdi mdi-headset circle teal accent-4"></i>
+                              <span class="title"><b>Centro de Atención Permanente</b></span>
+                              <p>
+                                <a href="tel:018003633422" class="tel"><i class="mdi mdi-phone"></i> 01 800 3 MEDICA (633 422)</a>
+                              </p>
+              </li>
+
+              <li class="collection-item avatar">
+                <i class="mdi mdi-account-star circle teal accent-4"></i>
+                <span class="title"><b>Dr. Sergio Cisneros Mora</b></span>
+                <br>
+                <span>Director de Clínicas</span>
+                <p>
+                  <a href="tel:+525555144700" class="tel"><i class="mdi mdi-phone"></i> 5514 - 4700 ext. 209</a>
+                  <br>
+                  <a href="mailto:scisneros@medicavial.com.mx" class="tel"><i class="mdi mdi-email"></i> scisneros@medicavial.com.mx</a>
+                </p>
+              </li>
+
+              <li class="collection-item avatar">
+                <i class="mdi mdi-account-star circle teal accent-4"></i>
+                <span class="title"><b>Ing. Alfredo Gutiérrez Gárate</b></span>
+                <br>
+                <span>Director de Operación</span>
+                <p>
+                  <a href="tel:+525555144700" class="tel"><i class="mdi mdi-phone"></i> 5514 - 4700 ext. 300</a>
+                  <br>
+                  <a href="mailto:agutierrez@medicavial.com.mx" class="tel"><i class="mdi mdi-email"></i> agutierrez@medicavial.com.mx</a>
+                </p>
+              </li>
+
+              <li class="collection-item avatar">
+                <i class="mdi mdi-web circle teal accent-4"></i>
+                <span class="title"><b>Sítio Web</b></span>
+                <!-- <br> -->
+                <!-- <span>Director de Operación</span> -->
+                <p>
+                  <a href="http://medicavial.com/" class="tel" target="_blank">www.medicavial.com <i class="mdi mdi-open-in-new"></i></a>
+                  <!-- <br> -->
+                  <!-- <a href="mailto:agutierrez@medicavial.com.mx" class="tel"><i class="mdi mdi-email"></i> agutierrez@medicavial.com.mx</a> -->
+                </p>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- termina seccion de Contacto -->
+
+  <!-- inicia seccion de guias -->
+  <div class="row animated fadeIn fast" *ngIf="verGuias">
+    <div class="col s12" align="right">
+      <button type="button" name="button" class="btn red waves-effect waves-light" (click)="switchGuias()">
+        <i class="mdi mdi-close"></i>
+        Cerrar
+      </button>
+    </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <p class="cyan-text text-darken-2 center flow-text">Sección en contrucción</p>
+            <p class="cyan-text text-darken-2 center flow-text"><i class="mdi mdi-coffee"></i> &amp; <i class="mdi mdi-code-tags"></i></p>
+          </div>
+        </div>
+        <!-- <div class="card-content"> -->
+          <!-- <ul class="collection">
+            <li class="collection-item"><div>Generar Orden de Rehabilitación<a href="#!" class="secondary-content"><i class="mdi mdi-send mdi-18px"></i></a></div></li>
+            <li class="collection-item"><div>Estatus de rehabilitación<a href="#!" class="secondary-content"><i class="mdi mdi-send mdi-18px"></i></a></div></li>
+            <li class="collection-item"><div>Estatus de administrativo<a href="#!" class="secondary-content"><i class="mdi mdi-send mdi-18px"></i></a></div></li>
+            <li class="collection-item"><div>FAQ<a href="#!" class="secondary-content"><i class="mdi mdi-send mdi-18px"></i></a></div></li>
+          </ul> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- termina seccion de guias -->
+</div>
